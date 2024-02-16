@@ -45,10 +45,11 @@ app.post('/send_email', async (req, res) => {
     var receiver = 'glassesdaniel@gmail.com';
 
     var transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: "sandbox.smtp.mailtrap.io",
+        port: 2525,
         auth: {
-            user: 'glassesdaniel@gmail.com',
-            pass: 'yreg nxhi ewnb ojfc'
+          user: "dd3e3f884bfedc",
+          pass: "449360dfb638cc"
         }
     });
     var mailOptions = {
