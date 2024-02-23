@@ -96,15 +96,17 @@ nav li:first-child{
 #hero-section{
     width: 100vw;
     height: 60vh;
-    background-image: url('/images/hero-section-bg.png');
+    background-image: url("/images/still-life-with-scales-justice.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center center;
+    background-attachment: fixed;
     display: flex;
     color: white;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.587);
     align-items: center;
     text-align: center;
+    backdrop-filter: blur(5px);
 }
 #hero-section h1{
     font-size: 30px;
@@ -131,7 +133,7 @@ nav li:first-child{
 
 #intro_div{
     width: 100%;
-    padding: 5% 2%;
+    padding: 1% 2%;
     z-index: 90;
     height: fit-content;
     display: flex;
@@ -196,6 +198,11 @@ nav li:first-child{
     align-items: center;
     z-index: -1;
 }
+#appointment_schedule h2{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
 #appointment_schedule form{
     width: 100%;
     height: 100%;
@@ -226,6 +233,9 @@ nav li:first-child{
 }
 #text_area_box{
     width: 100%;
+}
+#instagram{
+    display: flex;
 }
 .input_box span{
     position: absolute;
@@ -272,6 +282,7 @@ input[type=date]{
     align-items: center;
 }
 .testimonial_box{
+    width: 100%;
     display: flex;
     flex-direction: column;
     height: 200px;
@@ -306,7 +317,7 @@ input[type=date]{
 }
 .contact_info_col{
     text-align: center;
-    width: 40%;
+    width: 45%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -315,6 +326,9 @@ input[type=date]{
 }
 .contact_data{
     display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
 }
 #social_contacts{
     width: 100%;
@@ -497,18 +511,22 @@ footer{
         font-size: 20px;
     }
     #imgAndCertis{
-        width: 80%;
+        width: 50%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         margin: 3% auto;
     }
     #imgAndCertis img{
-        width: 30%;
+        width: 40%;
+    }
+    #intro_div {
+        display: flex;
+        flex-direction: row-reverse;
     }
     #intro_div p{
-        width: 70%;
+        width: 50%;
     }
     .practice_area_holder{
         width: 80%;
@@ -532,8 +550,8 @@ footer{
         align-items: flex-start;
         text-align: left;
     }
-    iframe{
-        height: 60vh;
+    #contact{
+        height: 1000px;
     }
     form{
         display: flex;
@@ -551,8 +569,11 @@ footer{
     .input_box{
         position: relative;
         width: 40%;
-        margin: 6% auto;
-        
+        margin: 2% auto;
+    }
+    #confirmsent{
+        transform: translate(-50%, -20%);
+        left: 50%;
     }
 }
 

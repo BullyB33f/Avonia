@@ -29,4 +29,8 @@ function closeWindow(){
      
 }
 
+document.addEventListener("scroll", (event) => {
+    closeWindow();
+})
+
 AOS.init();
