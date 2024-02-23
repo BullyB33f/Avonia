@@ -13,226 +13,280 @@
 </head>
 
 <body>
-    
+
     <% if(messages.success) {%>
         <div id="confirmsent">
-            <svg id="confirmclose" onclick="closeWindow()" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"width="24">
-                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            <svg id="confirmclose" onclick="closeWindow()" xmlns="http://www.w3.org/2000/svg" height="24"
+                viewBox="0 -960 960 960" width="24">
+                <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
             </svg>
             <img src="/images/checkmark.jpg">
-            <h4>APPOINTMENT REQUEST SENT <br><%=messages.success%> </h4>
+            <h4>APPOINTMENT REQUEST SENT <br>
+                <%=messages.success%>
+            </h4>
             <div id="loading"></div>
         </div>
         <%}%>
-    <nav>
-        <ul class="sidebar blur">
-            <li onclick="hideSideBar()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
-                        width="24">
-                        <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg></a></li>
-            <li onclick="hideSideBar()"><a href="#hero-section">HOME</a></li>
-            <li onclick="hideSideBar()"><a href="#intro_div">ABOUT</a></li>
-            <li onclick="hideSideBar()"><a href="#appointment_schedule">SCHEDULE APPOINTMENT</a></li>
-            <li onclick="hideSideBar()"><a href="#contact">CONTACT</a></li>
-        </ul>
-        <ul>
-            <li><img src="/images/logo.png"></li>
-            <li class="hideOnMobile"><a href="#hero-section">HOME</a></li>
-            <li class="hideOnMobile"><a href="#intro_div">ABOUT</a></li>
-            <li class="hideOnMobile"><a href="#appointment_schedule">SCHEDULE APPOINTMENT</a></li>
-            <li class="hideOnMobile"><a href="#contact">CONTACT</a></li>
-            <li onclick="showSidebar()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
-                        width="24">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                    </svg></a></li>
-        </ul>
-    </nav>
+            <nav>
+                <ul class="sidebar blur">
+                    <li onclick="hideSideBar()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                                viewBox="0 -960 960 960" width="24">
+                                <path
+                                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg></a></li>
+                    <li onclick="hideSideBar()"><a href="#hero-section">HOME</a></li>
+                    <li onclick="hideSideBar()"><a href="#intro_div">ABOUT</a></li>
+                    <li onclick="hideSideBar()"><a href="#appointment_schedule">SCHEDULE APPOINTMENT</a></li>
+                    <li onclick="hideSideBar()"><a href="#contact">CONTACT</a></li>
+                </ul>
+                <ul>
+                    <li><img src="/images/logo.png"></li>
+                    <li class="hideOnMobile"><a href="#hero-section">HOME</a></li>
+                    <li class="hideOnMobile"><a href="#intro_div">ABOUT</a></li>
+                    <li class="hideOnMobile"><a href="#appointment_schedule">SCHEDULE APPOINTMENT</a></li>
+                    <li class="hideOnMobile"><a href="#contact">CONTACT</a></li>
+                    <li onclick="showSidebar()" class="hideOnPc"><a><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                                viewBox="0 -960 960 960" width="24">
+                                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                            </svg></a></li>
+                </ul>
+            </nav>
 
 
-    <section id="hero-section">
+            <section id="hero-section">
 
-        <div class="col" id="text-col">
-            <h1>AVONIA E.<br>PINNOCK-MYRIE</h1><br>
-            <h3>&#x2014;&#x2014;&#x2014; <span>ATTORNEY AT LAW</span> &#x2014;&#x2014;&#x2014;</h3>
-        </div>
-
-        <div class="col" id="img-col">
-            <img src="/images/avonia1.png">
-        </div>
-    </section>
-
-
-    <div id="intro_div">
-        <p class="intro_div_item scroll-fade">
-            Mrs. Avonia E. Pinnock-Myrie is a detail-oriented attorney-at-law who ensures that she is always prepared,
-            no matter the occasion. Her confidence, passion for her field and applaudable analytic skills proves her
-            credibility and substantiality.
-        </p>
-        <img src="/images/avonia2.png" class=" intro_div_item">
-        <h2 class="intro_div_item ">Mrs. Avonia E. Pinnock-Myrie</h2>
-        <h1 class="intro_div_item ">
-            &#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;</h1>
-        <h3 class="intro_div_item ">attorney-at-law, LL.B (Hons)/LEC</h3>
-
-    </div>
-
-
-    <div id="practice_areas_div">
-        <h1 class="practice_area_item">PRACTICE AREAS</h1>
-
-        <div class="practice_area scroll-fade">
-            <h2>CIVIL LITIGATION</h2>
-            <img src="/images/rectangle-3.png">
-            <p>Mrs. Pinnock-Myrie has resolved a number of civil litigation cases, the range of which is not limited.
-                Regardless of where your case falls on this spectrum, she can ensure good results, personal data
-                protection, confidentiality and much more.</p>
-        </div>
-
-        <div class="practice_area scroll-fade">
-            <h2>FAMILY LAW</h2>
-            <img src="/images/rectangle-2.png">
-            <p>Family law is a constantly evolving practice area, and Mrs. Pinnock-Myrie deals with them all.</p>
-        </div>
-
-        <div class="practice_area scroll-fade">
-            <h2>CONVEYANCING LAND MATTERS</h2>
-            <img src="/images/landmatters.png">
-            <p>Mrs. Pinnock-Myrie does them all!
-                Application for Duplicate Certificate of Title, Transfer of Land, Lost Title Applications and more.</p>
-        </div>
-
-        <div class="practice_area scroll-fade">
-            <h2>ESTATE PLANNING</h2>
-            <img src="/images/estateplanning.png">
-            <p>Determining how your assets will be preserved, managed, and distributed after death or incapacitation can
-                be a tedious task. With Mrs. Pinnock-Myrie’s expertise and wisdom, we can help relieve this stress and
-                make it as simple as it can possible be.</p>
-        </div>
-
-        <div class="practice_area scroll-fade">
-            <h2>COMMERCIAL LAW</h2>
-            <img src="/images/commerciallaw.png">
-            <p>Jamaica has a set of laws that governs businesses engaged in commerce, merchandising, trade and sales.
-                These laws apply to their rights, relations and conduct. You may also need a contract here and there!
-                Mrs. Pinnock-Myrie will ensure that in all you do, you are protected and adhering to these laws.
-                Schedule an appointment to see how best Mrs. Pinnock-Myrie can help you with your legal needs.</p>
-        </div>
-    </div>
-
-
-    <div id="testimonials">
-        <h2>TESTIMONIALS</h2>
-        <div class="testimonial_box scroll-fade">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 17H17L19 13V7H13V13H16M6 17H9L11 13V7H5V13H8L6 17Z" fill="black" />
-            </svg>
-            <h3>REE TRACEY MUIR</h3>
-            <p><i>I just want to thank Mrs. Pinnock-Myrie for all her help in
-                    acquiring my land title. It was indeed a fete but she got it done. I couldn’t have asked for a
-                    better lawyer. </i></p>
-        </div>
-
-        <div class="testimonial_box scroll-fade">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 17H17L19 13V7H13V13H16M6 17H9L11 13V7H5V13H8L6 17Z" fill="black" />
-            </svg>
-            <h3>CHAVELLE MAITLAND</h3>
-            <p><i>Mrs. Avonia Pinnock-Myrie, attorney-at-law, exemplifies legal excellence. From her expertise to her
-                    seamless coordination, the law office provides a standout experience, making them my only choice for
-                    legal representation.</i>
-        </div>
-    </div>
-
-    <div id="contact">
-        <h2 class="practice_area_item">CONTACT</h2>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.757357608659!2d-78.13452191960009!3d18.221070794279623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ed96f617625a209%3A0x2c696a54bcdbdb3f!2sThe%20Law%20Office%20of%20Avonia%20E%20Pinnock%20Myrie%20LLB!5e0!3m2!1sen!2sjm!4v1706626827243!5m2!1sen!2sjm"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-            <div id="contact_info">
-                <div class="contact_info_col">
-                    <h3>Shop #16 Sav. Commercial Center, 120 Great George Street, Savanna-la-mar, Westmoreland</h3>
+                <div class="col" id="text-col">
+                    <h1>AVONIA E.<br>PINNOCK-MYRIE</h1><br>
+                    <h3>&#x2014;&#x2014;&#x2014; <span>ATTORNEY AT LAW</span> &#x2014;&#x2014;&#x2014;</h3>
                 </div>
-                
-                <svg class="contact_info_col" width="1" height="208" viewBox="0 0 1 208" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0.5" y1="207.039" x2="0.5" y2="-7.62939e-05" stroke="black"/>
-                    </svg>
+
+                <div class="col" id="img-col">
+                    <img src="/images/avonia1.png">
+                </div>
+            </section>
+
+
+            <div id="intro_div">
+                <p class="intro_div_item scroll-fade fontSize30">
+                    Mrs. Avonia E. Pinnock-Myrie is a detail-oriented attorney-at-law who ensures that she is always
+                    prepared,
+                    no matter the occasion. Her confidence, passion for her field and applaudable analytic skills proves
+                    her
+                    credibility and substantiality.
+                </p>
+                <div id="imgAndCertis" class="scroll-fade">
+                    <img src="/images/avonia2.png" class=" intro_div_item ">
+                    <div id="certifications">
+                        <h2 class="intro_div_item fontSize40 ">Mrs. Avonia E. Pinnock-Myrie</h2>
+                        <h1 class="intro_div_item ">
+                            &#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;
+                        </h1>
+                        <h3 class="intro_div_item fontSize40 ">attorney-at-law, LL.B (Hons)/LEC</h3>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div id="practice_areas_div">
+                <h1 class="practice_area_item scroll-fade fontSize40">PRACTICE AREAS</h1>
+
+                <div class="practice_area scroll-fade">
+                    <h2 class="fontSize30">CIVIL LITIGATION</h2>
+                    <div class="practice_area_holder">
+                        <img src="/images/rectangle-3.png">
+                        <p class="fontSize30">Mrs. Pinnock-Myrie has resolved a number of civil litigation cases, the
+                            range of which is not
+                            limited.
+                            Regardless of where your case falls on this spectrum, she can ensure good results, personal
+                            data
+                            protection, confidentiality and much more.</p>
+                    </div>
+
+                </div>
+
+                <div class="practice_area scroll-fade">
+                    <h2>FAMILY LAW</h2>
+                    <div class="practice_area_holder">
+                        <img src="/images/rectangle-2.png">
+                        <p class="fontSize30">Family law is a constantly evolving practice area, and Mrs. Pinnock-Myrie deals with them
+                            all.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="practice_area scroll-fade">
+                    <h2>CONVEYANCING LAND MATTERS</h2>
+                    <div class="practice_area_holder">
+                        <img src="/images/landmatters.png">
+                    <p class="fontSize30">Mrs. Pinnock-Myrie does them all!
+                        Application for Duplicate Certificate of Title, Transfer of Land, Lost Title Applications and
+                        more.</p>
+                </div>
+                    </div>
                     
 
-                <div class="contact_info_col">
-                    <div class="contact_data">
-                        <svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3.62 10.7496C5.06 14.4286 7.38 17.4446 10.21 19.3166L12.41 16.4566C12.69 16.0926 13.08 15.9886 13.43 16.1316C14.55 16.6126 15.75 16.8726 17 16.8726C17.2652 16.8726 17.5196 17.0095 17.7071 17.2533C17.8946 17.4971 18 17.8278 18 18.1726V22.7226C18 23.0673 17.8946 23.398 17.7071 23.6418C17.5196 23.8856 17.2652 24.0226 17 24.0226C12.4913 24.0226 8.1673 21.6942 4.97918 17.5496C1.79107 13.4051 0 7.78384 0 1.92256C0 1.57778 0.105357 1.24712 0.292893 1.00332C0.48043 0.759522 0.734784 0.622559 1 0.622559H4.5C4.76522 0.622559 5.01957 0.759522 5.20711 1.00332C5.39464 1.24712 5.5 1.57778 5.5 1.92256C5.5 3.54756 5.7 5.10756 6.07 6.56356C6.18 7.01856 6.1 7.52556 5.82 7.88956L3.62 10.7496Z"fill="black" />
-                        </svg>
-                        <h3>(876) 297-9220</h3>
+                <div class="practice_area scroll-fade">
+                    <h2>ESTATE PLANNING</h2>
+                <div class="practice_area_holder">
+                    <img src="/images/estateplanning.png">
+                    <p class="fontSize30">Determining how your assets will be preserved, managed, and distributed after death or
+                        incapacitation can
+                        be a tedious task. With Mrs. Pinnock-Myrie’s expertise and wisdom, we can help relieve this
+                        stress and
+                        make it as simple as it can possible be.</p>
+                </div>
+                </div>
+                    
+
+                <div class="practice_area scroll-fade">
+                    <h2>COMMERCIAL LAW</h2>
+                    <div class="practice_area_holder">
+                        <img src="/images/commerciallaw.png">
+                    <p class="fontSize30">Jamaica has a set of laws that governs businesses engaged in commerce, merchandising, trade and
+                        sales.
+                        These laws apply to their rights, relations and conduct. You may also need a contract here and
+                        there!
+                        Mrs. Pinnock-Myrie will ensure that in all you do, you are protected and adhering to these laws.
+                        Schedule an appointment to see how best Mrs. Pinnock-Myrie can help you with your legal needs.
+                    </p>
+                </div>
                     </div>
-                    <div class="contact_data">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    
+            </div>
+
+
+            <div id="testimonials">
+                <h2 class="fontSize40">TESTIMONIALS</h2>
+                <div class="testimonial_box scroll-fade">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 17H17L19 13V7H13V13H16M6 17H9L11 13V7H5V13H8L6 17Z" fill="black" />
+                    </svg>
+                    <h3 class="fontSize30">REE TRACEY MUIR</h3>
+                    <p class="fontSize25"><i>I just want to thank Mrs. Pinnock-Myrie for all her help in
+                            acquiring my land title. It was indeed a fete but she got it done. I couldn’t have asked for
+                            a
+                            better lawyer. </i></p>
+                </div>
+
+                <div class="testimonial_box scroll-fade">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 17H17L19 13V7H13V13H16M6 17H9L11 13V7H5V13H8L6 17Z" fill="black" />
+                    </svg>
+                    <h3 class="fontSize30">CHAVELLE MAITLAND</h3>
+                    <p class="fontSize25"><i>Mrs. Avonia Pinnock-Myrie, attorney-at-law, exemplifies legal excellence. From her expertise
+                            to her
+                            seamless coordination, the law office provides a standout experience, making them my only
+                            choice for
+                            legal representation.</i>
+                </div>
+            </div>
+
+            <div id="contact">
+                <h2 class="practice_area_item scroll-fade fontSize40">CONTACT</h2>
+                <iframe class="scroll-fade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.757357608659!2d-78.13452191960009!3d18.221070794279623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ed96f617625a209%3A0x2c696a54bcdbdb3f!2sThe%20Law%20Office%20of%20Avonia%20E%20Pinnock%20Myrie%20LLB!5e0!3m2!1sen!2sjm!4v1706626827243!5m2!1sen!2sjm"
+                    style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div id="contact_info">
+                    <div class="contact_info_col scroll-fade fontSize20">
+                        <h3>Shop #16 Sav. Commercial Center, 120 Great George Street, Savanna-la-mar, Westmoreland</h3>
+                    </div>
+
+                    <svg class="contact_info_col scroll-fade" width="1" height="208" viewBox="0 0 1 208" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.5" y1="207.039" x2="0.5" y2="-7.62939e-05" stroke="black" />
+                    </svg>
+
+
+                    <div class="contact_info_col fontSize20">
+                        <div class="contact_data scroll-fade">
+                            <svg width="18" height="25" viewBox="0 0 18 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.62 10.7496C5.06 14.4286 7.38 17.4446 10.21 19.3166L12.41 16.4566C12.69 16.0926 13.08 15.9886 13.43 16.1316C14.55 16.6126 15.75 16.8726 17 16.8726C17.2652 16.8726 17.5196 17.0095 17.7071 17.2533C17.8946 17.4971 18 17.8278 18 18.1726V22.7226C18 23.0673 17.8946 23.398 17.7071 23.6418C17.5196 23.8856 17.2652 24.0226 17 24.0226C12.4913 24.0226 8.1673 21.6942 4.97918 17.5496C1.79107 13.4051 0 7.78384 0 1.92256C0 1.57778 0.105357 1.24712 0.292893 1.00332C0.48043 0.759522 0.734784 0.622559 1 0.622559H4.5C4.76522 0.622559 5.01957 0.759522 5.20711 1.00332C5.39464 1.24712 5.5 1.57778 5.5 1.92256C5.5 3.54756 5.7 5.10756 6.07 6.56356C6.18 7.01856 6.1 7.52556 5.82 7.88956L3.62 10.7496Z"
+                                    fill="black" />
+                            </svg>
+                            <h3>(876) 297-9220</h3>
+                        </div>
+                        <div class="contact_data scroll-fade">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 8L12 13L4 8V6L12 11L20 6M20 4H4C2.89 4 2 4.89 2 6V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V6C22 4.89 21.1 4 20 4Z"
+                                    fill="black" />
+                            </svg>
+                            <h3>avoniapnnck@gmail.com</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="social_contacts scroll-fade">
+                    <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M20 8L12 13L4 8V6L12 11L20 6M20 4H4C2.89 4 2 4.89 2 6V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V6C22 4.89 21.1 4 20 4Z"
+                                d="M12 2.04004C6.5 2.04004 2 6.53004 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85004C10.44 7.34004 11.93 5.96004 14.22 5.96004C15.31 5.96004 16.45 6.15004 16.45 6.15004V8.62004H15.19C13.95 8.62004 13.56 9.39004 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5879 18.0622 20.3856 19.6099 18.5701C21.1576 16.7546 22.0054 14.4457 22 12.06C22 6.53004 17.5 2.04004 12 2.04004Z"
                                 fill="black" />
                         </svg>
-                        <h3>avoniapnnck@gmail.com</h3>
-                    </div>
+                    </a>
+                    <a href="https://www.instagram.com/thelawofficeofavoniapinnock/"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"
+                                fill="black" />
+                        </svg>
+                    </a>
+                    <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z"
+                                fill="black" />
+                        </svg>
+                    </a>
                 </div>
 
             </div>
 
-            <div id="social_contacts">
-                <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2.04004C6.5 2.04004 2 6.53004 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85004C10.44 7.34004 11.93 5.96004 14.22 5.96004C15.31 5.96004 16.45 6.15004 16.45 6.15004V8.62004H15.19C13.95 8.62004 13.56 9.39004 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5879 18.0622 20.3856 19.6099 18.5701C21.1576 16.7546 22.0054 14.4457 22 12.06C22 6.53004 17.5 2.04004 12 2.04004Z" fill="black"/>
-                    </svg>
-                    </a>
-                <a href="https://www.instagram.com/thelawofficeofavoniapinnock/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z" fill="black"/>
-                    </svg>
-                    </a>
-                <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z" fill="black"/>
-                    </svg>
-                    </a>
-            </div>
-        
-    </div>
-    
-    <div id="appointment_schedule">
+            <div id="appointment_schedule">
 
-        
-        
-        <form action="/send_email" method="post" id="appointment_form">
-            <h2>Schedule An Appointment</h2>
-            <div class="input_box">
-                <input type="text" id="name" name="name" required><span>NAME</span>
-            </div>
-            <div class="input_box">
-                <input type="text" id="email" name="email" required><span>EMAIL</span>
-            </div>
-            <div class="input_box">
-                <input type="text" id="subject" name="subject" required><span>SUBJECT OF APPOINTMENT</span>
-            </div>
-            <div class="input_box">
-                <input type="text" id="phonenumber" name="phonenumber" required><span>PHONE NUMBER</span>
-            </div>
-            <div class="input_box">
-                <textarea id="textarea" name="message" rows="6" cols="50" required
-                    placeholder="Write a message here..."></textarea>
-            </div>
-            <div class="input_box">
-                <input type="submit" value="PLACE APPOINTMENT" id="submit" onclick="formSubmit()">
-            </div>
-        </form>
-    </div>
 
-    <footer>
-        
-    </footer>
+                <h2 class="fontSize40" style="text-transform: uppercase; font-family: Poppins, sans-serif;">Schedule An Appointment</h2>
+                <form action="/send_email" method="post" id="appointment_form">
+                    
+                    <div class="input_box scroll-fade fontSize25">
+                        <input type="text" id="name" name="name" required><span>NAME</span>
+                    </div>
+                    <div class="input_box scroll-fade">
+                        <input type="text" id="email" name="email" required><span>EMAIL</span>
+                    </div>
+                    <div class="input_box scroll-fade">
+                        <input type="text" id="subject" name="subject" required><span>SUBJECT OF APPOINTMENT</span>
+                    </div>
+                    <div class="input_box scroll-fade">
+                        <input type="text" id="phonenumber" name="phonenumber" required><span>PHONE NUMBER</span>
+                    </div>
+                    <div class="input_box scroll-fade" id="text_area_box">
+                        <textarea id="textarea" name="message" rows="6" cols="50" required
+                            placeholder="Write a message here..."></textarea>
+                    </div>
+                    <div class="input_box scroll-fade">
+                        <input type="submit" value="PLACE APPOINTMENT" id="submit" onclick="formSubmit()">
+                    </div>
+                </form>
+            </div>
+
+            <footer>
+
+            </footer>
 
 
 
-    <script src="/scripts/script.js" async defer></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="/scripts/script.js" async defer></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>
