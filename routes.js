@@ -5,12 +5,13 @@ import nodemailer from "nodemailer";
 import session from "express-session";
 import flash from "express-flash";
 import bodyParser from "body-parser";
+import dotenv from 'dotenv';
 
 const app = express();
 
 const port = 6565;
 
-
+dotenv.config({ path: '.env'});
 
 app.use(bodyParser.json());
 
@@ -42,14 +43,13 @@ app.post('/send_email', async (req, res) => {
     var subject = req.body.subject;
     var message = req.body.message;
     var phoneno = req.body.phonenumber;
-    var receiver = 'glassesdaniel@gmail.com';
+    var receiver = process.env.USER;
 
     var transporter = nodemailer.createTransport({
-        host: "sandbox.smtp.mailtrap.io",
-        port: 2525,
+        service: process.env.SERVICE,
         auth: {
-          user: "dd3e3f884bfedc",
-          pass: "449360dfb638cc"
+          user: process.env.USER,
+          pass: process.env.PASS
         }
     });
     var mailOptions = {
