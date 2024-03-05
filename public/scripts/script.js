@@ -21,8 +21,14 @@ function hideSideBar(){
     }, "0400");
 };
 function closeWindow(){
-    document.getElementById('confirmsent').style.transform = 'translateY(-50%)';
-    document.getElementById('confirmsent').style.transform = 'translateX(-50%)';
+    if (window.innerWidth < 600) {
+        document.getElementById('confirmsent').style.transform = 'translateY(-50%)';
+    }
+    else{
+        document.getElementById('confirmsent').style.transform = 'translateY(-50%)';
+        document.getElementById('confirmsent').style.transform = 'translateX(-50%)';
+        }
+    
     document.getElementById('confirmsent').style.opacity = 0;
     setTimeout(() => {
         document.getElementById('confirmsent').style.display = "none";

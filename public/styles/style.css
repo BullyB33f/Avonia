@@ -270,6 +270,11 @@ input[type=date]{
     background-color: black;
     color: white;
     font-weight: 600; 
+    cursor: pointer;
+    transition: ease 0.8s;
+}
+#submit:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #testimonials{
     font-family: Poppins;
@@ -368,30 +373,34 @@ input[type=date]{
 }
 #confirmclose{
     transform: translate(150px);
+    cursor: pointer;
 }
-/* #confirmsent #loading{
+#confirmcloseweb{
+    display: none;
+    cursor: pointer;
+}
+.longbar{
     width: 100%;
-    height: 20px;
-    background-color: greenyellow;
-    border-bottom-right-radius:10px ;
-    border-bottom-left-radius:10px ;
-    align-self: flex-start;
-    animation: deload 4s;
-} */
+    height: 1px;
+    background: black;
+    margin: 1% auto;
+}
 
 footer{
     height: 400px;
     width: 100%;
-    margin-top: 20%;
+    margin-top: 7%;
     background-image: url('/images/footerbg.png');
     background-position: center center;
     background-size: 100% 100%;
     color: white;
     display: flex;
+    align-items: center;
     text-align: center;
     justify-content: center;
     position: absolute;
     transform: translateY(300px);
+    
     
 }
 
@@ -572,8 +581,22 @@ footer{
         margin: 2% auto;
     }
     #confirmsent{
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         transform: translate(-50%, -20%);
         left: 50%;
+    }
+    #confirmclose{
+        display: none;
+    }
+    #confirmcloseweb{
+        display: block;
+        transform: translateY(-70px);
+    }
+    #logoimg{
+        width: 400px;
     }
 }
 

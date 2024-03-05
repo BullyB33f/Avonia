@@ -14,7 +14,7 @@
 
 <body>
 
-   
+    <% if(messages.success) {%>
         <div id="confirmsent">
             <svg id="confirmclose" onclick="closeWindow()" xmlns="http://www.w3.org/2000/svg" height="24"
                 viewBox="0 -960 960 960" width="24">
@@ -25,9 +25,13 @@
             <h4>APPOINTMENT REQUEST SENT <br>
                 <%=messages.success%>
             </h4>
-            <div id="loading"></div>
+            <svg id="confirmcloseweb" onclick="closeWindow()" xmlns="http://www.w3.org/2000/svg" height="24"
+            viewBox="0 -960 960 960" width="24">
+            <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg>
         </div>
-        
+        <%}%>
             <nav>
                 <ul class="sidebar blur">
                     <li onclick="hideSideBar()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24"
@@ -41,7 +45,7 @@
                     <li onclick="hideSideBar()"><a href="#contact">CONTACT</a></li>
                 </ul>
                 <ul>
-                    <li><img src="/images/logo.png"></li>
+                    <li><img src="/images/logo.png" id="logoimg"></li>
                     <li class="hideOnMobile"><a href="#hero-section">HOME</a></li>
                     <li class="hideOnMobile"><a href="#intro_div">ABOUT</a></li>
                     <li class="hideOnMobile"><a href="#appointment_schedule">SCHEDULE APPOINTMENT</a></li>
@@ -79,10 +83,9 @@
                     <img src="/images/avonia2.png" class=" intro_div_item ">
                     <div id="certifications">
                         <h2 class="intro_div_item fontSize20 ">Mrs. Avonia E. Pinnock-Myrie</h2>
-                        <h1 class="intro_div_item ">
-                            &#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;
+                        <h1 class="intro_div_item longbar">
                         </h1>
-                        <h3 class="intro_div_item fontSize20 ">attorney-at-law, LL.B (Hons)/LEC</h3>
+                        <h3 class="intro_div_item fontSize20 ">Attorney-at-law, LL.B (Hons)/LEC</h3>
                     </div>
                 </div>
 
@@ -165,7 +168,7 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 17H17L19 13V7H13V13H16M6 17H9L11 13V7H5V13H8L6 17Z" fill="black" />
                     </svg>
-                    <h3 class="fontSize30">REE TRACEY MUIR</h3>
+                    <h3 class="fontSize30">REE TRACY MUIR</h3>
                     <p class="fontSize25"><i>I just want to thank Mrs. Pinnock-Myrie for all her help in
                             acquiring my land title. It was indeed a fete but she got it done. I couldn’t have asked for
                             a
@@ -177,7 +180,7 @@
                         <path d="M14 17H17L19 13V7H13V13H16M6 17H9L11 13V7H5V13H8L6 17Z" fill="black" />
                     </svg>
                     <h3 class="fontSize30">CHAVELLE MAITLAND</h3>
-                    <p class="fontSize25"><i>Mrs. Avonia Pinnock-Myrie, attorney-at-law, exemplifies legal excellence. From her expertise
+                    <p class="fontSize25"><i>Mrs. Avonia Pinnock-Myrie, Attorney-at-law, exemplifies legal excellence. From her expertise
                             to her
                             seamless coordination, the law office provides a standout experience, making them my only
                             choice for
@@ -264,7 +267,7 @@
             </div>
 
             <footer>
-
+                <h2 class="fontSize30">&#169; 2024 Avonia E. Pinnock-Myrie </h2>
             </footer>
 
 
