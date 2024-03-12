@@ -59,15 +59,18 @@ app.post('/send_email', async (req, res) => {
         text: message + '\n\n\nFROM:' + name + '\nEMAIL:' + email + '\nPHONE NUMBER: ' + phoneno 
     }
 
-    transporter.sendMail(mailOptions, function(error, info){
-        if (error){
-            console.log(error)
-        }else{
-            req.flash("success","You will receive an email confirming when to come in for your appointment")
-            console.log("Email send: " + info.response)
-        }
-        res.redirect("/")
-    })
+    await new Promise((resolve, reject) => { 
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error){
+                console.log(error)
+            }else{
+                req.flash("success","You will receive an email confirming when to come in for your appointment")
+                console.log("Email send: " + info.response)
+            }
+            res.redirect("/")
+        });
+    });
+    
 
 });
 
